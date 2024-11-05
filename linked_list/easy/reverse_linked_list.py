@@ -29,7 +29,7 @@ class Solution(object):
         print()
 
 
-NodeHead1 = ListNode(3, ListNode(5, ListNode(2)))
+NodeHead1 = ListNode(3, ListNode(4, ListNode(5)))
 solution = Solution()
 solution.printList(solution.reverseList(NodeHead1))
 
