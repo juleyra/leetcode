@@ -3,7 +3,6 @@ from collections import deque
 
 
 class TreeNode(object):
-    fdnsjfnhsjkdhbnfsdjkhbfsdkjbfsdkjhbfsk
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
@@ -14,25 +13,16 @@ class Solution(object):
         if root is None:
             return []
         result = []
-
         queue = deque([root])
-        k = 0
         while queue:
-            level_size = len(queue)
-
-            for i in range(level_size):
-                node = queue.popright()
-                if k == 1:
-                    print(node.val)
-                    sys.exit()
-                if i == level_size - 1:
-                    result.append(node.val)
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-            k+=1
-
+            for _ in len(queue):
+                node = queue.popleft()
+                if node:
+                    if node.left:
+                        queue.append(node.left)
+                    if node.right:
+                        queue.append(node.right)
+            result.append(node.val)
 
         return result
 
@@ -45,4 +35,5 @@ class Solution(object):
 tree = TreeNode(1, TreeNode(2, None, TreeNode(5, TreeNode(4))), TreeNode(3, TreeNode(6)))
 
 sol = Solution()
-sol.rightSideView(tree)
+a = sol.rightSideView(tree)
+print(a)
