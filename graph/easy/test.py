@@ -72,9 +72,17 @@ class Graph:
                     stack.append(neighbor)
 
 
-graph = Graph([1, 2, 3, 4, 5, 6])
-edges = [(1, 2), (1, 3), (2, 3), (3, 4), (4, 5), (5, 6)]
-for edge in edges:
-    graph.add_edge(*edge)
-print(graph.adjacency_list)
-graph.dfs(1)
+# graph = Graph([1, 2, 3, 4, 5, 6])
+# edges = [(1, 2), (1, 3), (2, 3), (3, 4), (4, 5), (5, 6)]
+# for edge in edges:
+#     graph.add_edge(*edge)
+# print(graph.adjacency_list)
+# graph.dfs(1)
+
+
+def func(x=[ ]):
+ x.append(1)
+ return x
+
+print(func(), end= ' ')
+print(func())
